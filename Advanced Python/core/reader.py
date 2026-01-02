@@ -7,3 +7,4 @@ def read_data(file_path):
         for line in file:
             records.append(line.strip())
         return records
+

@@ -6,3 +6,4 @@ def write_data(file_path, records):
         for record in records:
             file.write(record + "\n")
 
+
