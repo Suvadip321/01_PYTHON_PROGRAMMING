@@ -1,41 +1,25 @@
-# --- ASSIGNMENT OPERATORS ---
+# ASSIGNMENT OPERATORS
 
-# Simple assignment (=)
 x = 10
-print("x =", x)
-# Output: x = 10
+print(x)
 
-# Add and assign (+=)
-x += 5   # equivalent to x = x + 5
-print("x after += 5:", x)
-# Output: x after += 5: 15
+x += 5   # x = x + 5
+print(x)
 
-# Subtract and assign (-=)
-x -= 3   # equivalent to x = x - 3
-print("x after -= 3:", x)
-# Output: x after -= 3: 12
+x -= 3   # x = x - 3
+print(x)
 
-# Multiply and assign (*=)
-x *= 2   # equivalent to x = x * 2
-print("x after *= 2:", x)
-# Output: x after *= 2: 24
+x *= 2   # x = x * 2
+print(x)
 
-# Divide and assign (/=)
-x /= 4   # equivalent to x = x / 4
-print("x after /= 4:", x)
-# Output: x after /= 4: 6.0   (always float)
+x /= 4   # x = x / 4
+print(x)
 
-# Floor divide and assign (//=)
-x //= 2  # equivalent to x = x // 2
-print("x after //= 2:", x)
-# Output: x after //= 2: 3.0
+x //= 2  # x = x // 2
+print(x)
 
-# Modulus and assign (%=)
-x %= 2   # equivalent to x = x % 2
-print("x after %= 2:", x)
-# Output: x after %= 2: 1.0
+x %= 2   # x = x % 2
+print(x)
 
-# Exponent and assign (**=)
-x **= 3  # equivalent to x = x ** 3
-print("x after **= 3:", x)
-# Output: x after **= 3: 1.0
+x **= 3  # x = x ** 3
+print(x)

@@ -1,6 +1,8 @@
-# break → exits the loop immediately
-# continue → skips the current iteration
-# pass → does nothing (used as a placeholder)
+"""
+break → exits the loop immediately
+continue → skips the current iteration
+pass → does nothing (used as a placeholder)
+"""
 
 # Example 1: Normal loop (no break, continue, or pass)
 print("Example 1 (no break, continue, pass):")

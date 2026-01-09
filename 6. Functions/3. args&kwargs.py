@@ -1,41 +1,28 @@
-# =======================================
-# *args and **kwargs
-# =======================================
+# *ARGS and **KWARGS
 
-# ----- *args (variable positional arguments) -----
-def add_numbers(*args):
+# *args (variable positional arguments)
+def nums_tuple(*nums):
     """Accepts any number of positional arguments (packed into a tuple)"""
-    print("Args received:", args)  # tuple
-    return sum(args)
+    return nums
 
-print("Sum:", add_numbers(1, 2, 3, 4))  # 10
+print(nums_tuple(1, 2, 3, 4, 5))
 
-
-# ----- **kwargs (variable keyword arguments) -----
-def print_info(**kwargs):
+# **kwargs (variable keyword arguments)
+def info_dict(**info):
     """Accepts any number of keyword arguments (packed into a dict)"""
-    print("Kwargs received:", kwargs)  # dictionary
-    for key, value in kwargs.items():
-        print(f"{key}: {value}")
+    return info
 
-print_info(name="Alice", age=25, field="ML")
+print(info_dict(name="Suvadip", age=20, city="Kolkata"))
 
 
-# ----- Mixing normal args + *args + **kwargs -----
+# Mixing normal args + *args + **kwargs
 def model_config(model_name, *layers, **params):
-    """Example: configuring an ML model"""
-    print(f"\nModel: {model_name}")
-    print("Layers:", layers)        # tuple of positional arguments
-    print("Parameters:", params)    # dictionary of keyword arguments
+    print("Model:", model_name)
+    print("Layers:", layers)
+    print("Parameters:", params)
 
-model_config("NeuralNet", "Input", "Dense", "Output",
-            learning_rate=0.01, epochs=50, optimizer="adam")
-
-
-# ----- Unpacking with * and ** -----
-nums = [10, 20, 30]
-options = {"learning_rate": 0.05, "epochs": 100}
-
-print("\nUnpacking examples:")
-print(add_numbers(*nums))  # same as add_numbers(10, 20, 30)
-print_info(**options)      # same as print_info(learning_rate=0.05, epochs=100)
+model_config(
+                "ANN",
+                "Input", "Dense", "Output",
+                learning_rate=0.01, epochs=50, optimizer="adam"
+            )

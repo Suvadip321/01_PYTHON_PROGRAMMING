@@ -1,45 +1,81 @@
-# ---------- Exception Handling Example ----------
+import logging
 
-def divide_numbers(a, b):
-  try:
-    # Manually raise exception if numbers are negative
-    if a < 0 or b < 0:
-        raise ValueError("Negative numbers not allowed")  # raise example
+# Logging setup
+logging.basicConfig(
+    filename="app.log",
+    level=logging.ERROR,
+    format="%(asctime)s - %(levelname)s - %(message)s"
+)
 
-    # Division operation
-    result = a / b
+# Basic try / except
+try:
+    value = int("10")
+except ValueError:
+    pass
 
-  # Specific exceptions
-  except ZeroDivisionError as e:
-    print("Error: Cannot divide by zero!", e)
-    result = None
+# ---------- Multiple except blocks ----------
+try:
+    result = 10 / 0
+except ZeroDivisionError:
+    logging.error("Division by zero")
+except TypeError:
+    logging.error("Invalid type")
 
-  except TypeError as e:
-    print("Error: Invalid data type!", e)
-    result = None
 
-  except ValueError as e:
-    print("Error:", e)
-    result = None
+# ---------- Catching multiple exceptions ----------
+try:
+    number = int("abc")
+except (ValueError, TypeError):
+    logging.error("Invalid conversion")
 
-  # Catch-all for any other exception
-  except Exception as e:
-    print("Some unexpected error occurred:", e)
-    result = None
 
-  # Executes if no exception occurs
-  else:
-    print("Division successful, result is:", result)
+# ---------- Generic exception (boundary use) ----------
+try:
+    data = None
+    len(data)
+except Exception as e:
+    logging.error(f"Unexpected error: {e}")
 
-  # Executes no matter what
-  finally:
-    print("Execution complete.\n")
 
-  return result
+# ---------- else and finally ----------
+try:
+    x = int("5")
+except ValueError:
+    logging.error("Conversion failed")
+else:
+    x = x * 2
+finally:
+    x = None
 
-# ---------- Testing ----------
-divide_numbers(10, 2)     # Valid input
-divide_numbers(10, 0)     # Division by zero
-divide_numbers(10, "2")   # Invalid type
-divide_numbers(-5, 2)     # Negative number triggers raise
-divide_numbers(None, 2)   # Unexpected error
+
+# ---------- Raising exceptions ----------
+def withdraw(balance, amount):
+    if amount > balance:
+        raise ValueError("Insufficient balance")
+    return balance - amount
+
+
+# ---------- Custom exception ----------
+class ValidationError(Exception):
+    pass
+
+
+def validate_age(age: int):
+    if age < 0:
+        raise ValidationError("Age must be non-negative")
+
+
+# ---------- Re-raising exceptions ----------
+try:
+    int("xyz")
+except ValueError:
+    logging.error("Re-raising exception")
+    raise
+
+
+# ---------- Handling exceptions in functions ----------
+def safe_divide(a, b):
+    try:
+        return a / b
+    except ZeroDivisionError:
+        return None

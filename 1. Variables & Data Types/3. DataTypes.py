@@ -1,4 +1,4 @@
-# --- INTEGER (int) ---
+# INTEGER (int)
 age = 20
 print("Age:", age, "| Type:", type(age))
 print("Memory Address (id):", id(age))
@@ -9,7 +9,7 @@ print("Is age an int?", isinstance(age, int))
 # Is age an int? True
 
 
-# --- FLOAT (float) ---
+# FLOAT (float)
 pi = 3.14159
 print("Pi:", pi, "| Type:", type(pi))
 print("Memory Address (id):", id(pi))
@@ -20,7 +20,7 @@ print("Is pi a float?", isinstance(pi, float))
 # Is pi a float? True
 
 
-# --- STRING (str) ---
+# STRING (str)
 language = "Python"
 print("Language:", language, "| Type:", type(language))
 print("Memory Address (id):", id(language))
@@ -31,7 +31,7 @@ print("Is language a str?", isinstance(language, str))
 # Is language a str? True
 
 
-# --- BOOLEAN (bool) ---
+# BOOLEAN (bool) -> True / False
 is_student = True
 print("is_student:", is_student, "| Type:", type(is_student))
 print("Memory Address (id):", id(is_student))
@@ -42,7 +42,7 @@ print("Is is_student a bool?", isinstance(is_student, bool))
 # Is is_student a bool? True
 
 
-# --- NONE TYPE (NoneType) ---
+# NONE TYPE (None)
 data = None
 print("data:", data, "| Type:", type(data))
 print("Memory Address (id):", id(data))
@@ -52,7 +52,7 @@ print("Is data NoneType?", isinstance(data, type(None)))
 # Memory Address (id): <some unique number>
 # Is data NoneType? True
 
-# --- Complex ---
+# Complex
 x = 7j
 print("x:", x, "| Type:", type(x))
 print("Memory Address (id):", id(x))
@@ -61,4 +61,3 @@ print("Is x a complex number?", isinstance(x, complex))
 # x: 7j | Type: <class 'complex'>
 # Memory Address (id): <some unique number>
 # Is x a complex number? True
-

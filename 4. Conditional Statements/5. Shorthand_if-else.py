@@ -1,15 +1,12 @@
-x = 5
-
 # Single-line if statement
-
-if x > 3: print("x is big")   # Output: x is big
+x = 19
+if x >= 18: print("x is adult")
 
 # Single-line if-else (Ternary)
-
-print("Even") if x % 2 == 0 else print("Odd")   # Output: Odd
-
 a = 10
 b = 20
 
 max = a if a > b else b
-print("Max:", max)         # Output: Max: 20
+print("Max:", max)
+
+print("x is even") if x % 2 == 0 else print("x is odd")

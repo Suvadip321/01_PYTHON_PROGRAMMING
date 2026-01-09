@@ -1,16 +1,18 @@
-# ================= ITERATOR =================
-nums = [1, 2, 3]        # A list is iterable
-it = iter(nums)         # Convert iterable -> iterator
-print(next(it))         # 1
-print(next(it))         # 2
-print(next(it))         # 3
+# ITERATOR
+nums = [1, 2, 3]
+i = iter(nums)
+print(i)
+print(next(i))         # 1
+print(next(i))         # 2
+print(next(i))         # 3
 
-# ================= GENERATOR =================
+# GENERATOR
 def my_gen():
   for i in range(1, 4):
     yield i             # yield pauses and returns value one by one
 
-g = my_gen()            # Generator is also an iterator
-print(next(g))          # 1
-print(next(g))          # 2
-print(next(g))          # 3
+gen = my_gen()            # Generator is also an iterator
+print(gen)
+print(next(gen))          # 1
+print(next(gen))          # 2
+print(next(gen))          # 3

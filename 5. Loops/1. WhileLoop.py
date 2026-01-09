@@ -1,6 +1,4 @@
-# -------------------------------
 # Basic while loop
-# -------------------------------
 print("Basic while loop (print 1 to 10):")
 i = 1
 while i <= 10:
@@ -9,12 +7,11 @@ while i <= 10:
 
 print("\n")
 
-# -------------------------------
+
 # Nested while loops
-# -------------------------------
 print("Nested while loops:")
 i = 1
-while i <= 2:
+while i <= 3:
     j = 1
     while j <= 3:
         print(f"i={i}, j={j}")
@@ -23,9 +20,8 @@ while i <= 2:
 
 print("\n")
 
-# -------------------------------
+
 # Infinite while loop with break
-# -------------------------------
 print("Infinite while loop with break:")
 i = 1
 while True:         # Infinite loop
@@ -36,9 +32,8 @@ while True:         # Infinite loop
 
 print("\n")
 
-# -------------------------------
+
 # Using continue to skip iteration
-# -------------------------------
 print("Using continue to skip 3:")
 i = 0
 while i < 5:
@@ -50,9 +45,7 @@ while i < 5:
 print("\n")
 
 
-# -------------------------------
 # Using pass in while loop
-# -------------------------------
 print("Using pass in while loop:")
 i = 1
 while i <= 5:
@@ -63,9 +56,7 @@ while i <= 5:
 
 print("\n")
 
-# -------------------------------
 # While loop with user input
-# -------------------------------
 print("While loop with user input (Enter 5 to exit):")
 num = 0
 while num != 5:

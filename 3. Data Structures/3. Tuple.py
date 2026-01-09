@@ -1,7 +1,4 @@
-# =========================================
 # TUPLE CREATION
-# =========================================
-
 # Empty tuple
 t1 = ()
 # Tuple with elements
@@ -11,62 +8,52 @@ t3 = (1, "Python", 3.14, True)
 # Nested tuple
 t4 = (1, (2, 3), 4)
 
-print("Empty tuple:", t1)
-print("Integer tuple:", t2)
-print("Mixed tuple:", t3)
-print("Nested tuple:", t4)
+print(t1)
+print(t2)
+print(t3)
+print(t4)
 
-# =========================================
-# TUPLE LENGTH
-# =========================================
+# LENGTH, INDEXING & SLICING
+t = ("p", "y", "t", "h", "o", "n")
 
-length = len(t2)
-print("\nLength of t2:", length)
+# len() -> returns number of elements in a tuple
+print("\nLength:", len(t))
 
-# =========================================
-# TUPLE INDEXING AND SLICING
-# =========================================
-
-text_tuple = ("Python", "is", "awesome")
-
-# Indexing
+# Indexing: Access individual elements
 print("\nIndexing:")
-print("text_tuple[0]:", text_tuple[0])    # First element
-print("text_tuple[-1]:", text_tuple[-1])  # Last element
+print(t[0])    # First element 'p'
+print(t[-1])   # Last element 'n'
+tuple_2d = ((1, 2), (3, 4), (5, 6))
+print(tuple_2d[0][1])
 
-# Slicing
+# Slicing: Extract a subtuple [start:end:step]
 print("\nSlicing:")
-print("text_tuple[0:2]:", text_tuple[0:2])   # First two elements
-print("text_tuple[:2]:", text_tuple[:2])     # First two elements
-print("text_tuple[1:]:", text_tuple[1:])     # From second element to end
-print("text_tuple[::-1]:", text_tuple[::-1]) # Reversed tuple
+print(t[0:6:1])
+print(t[0:4]) 
+print(t[:3])
+print(t[2:])
+print(t[:])
+print(t[::2])
+print(t[::-1])
 
-# =========================================
+
 # TUPLE IMMUTABILITY
-# =========================================
-
 t = (10, 20, 30)
-# t[0] = 100  # ❌ Error, tuples are immutable
-new_t = (100,) + t[1:]  # ✅ Create a new tuple
-print("\nOriginal tuple:", t)
-print("Modified tuple (new tuple):", new_t)
+# t[0] = 100            # Error, tuples are immutable
+new_t = (100,) + t[1:]  # Create a new tuple
+print("\nModified tuple:", new_t)
 
-# =========================================
+
 # TUPLE OPERATIONS
-# =========================================
-
 a = (1, 2, 3)
 b = (4, 5, 6)
 
 print("\nConcatenation:", a + b)  # Combine tuples
 print("Repetition:", a * 3)       # Repeat tuple
 
-# =========================================
+
 # TUPLE METHODS
-# =========================================
-
 t = (3, 1, 4, 1, 5, 9)
-
 print("\nOriginal tuple:", t)
 
 # Counting occurrences
@@ -74,10 +61,8 @@ print("Count of 1:", t.count(1))
 # Index of first occurrence
 print("Index of 4:", t.index(4))
 
-# =========================================
-# TUPLE UNPACKING
-# =========================================
 
+# TUPLE UNPACKING
 # Basic unpacking
 t = (10, 20, 30)
 a, b, c = t

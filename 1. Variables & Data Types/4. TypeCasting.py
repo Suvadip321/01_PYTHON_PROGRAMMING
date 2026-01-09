@@ -1,6 +1,7 @@
-# --- IMPLICIT TYPE CASTING ---
-# Python automatically converts smaller data type into a larger one (type promotion).
-
+# IMPLICIT TYPE CASTING
+"""
+Python automatically converts smaller data type into a larger one (type promotion).
+"""
 x = 10      # int
 y = 3.5     # float
 result = x + y   # int is promoted to float automatically
@@ -8,9 +9,10 @@ print("Result:", result, "| Type:", type(result))
 # Output: Result: 13.5 | Type: <class 'float'>
 
 
-# --- EXPLICIT TYPE CASTING ---
-# Manually converting data types using int(), float(), str(), bool()
-
+# EXPLICIT TYPE CASTING
+"""
+Manually converting data types using int(), float(), str(), bool()
+"""
 # String to int
 num_str = "100"
 num_int = int(num_str)
@@ -40,5 +42,3 @@ print(int(True), int(False))
 # Int to boolean
 print(bool(0), bool(1))
 # Output: False True
-
-

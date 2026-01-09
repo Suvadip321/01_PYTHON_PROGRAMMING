@@ -1,36 +1,25 @@
-# --- ARITHMETIC OPERATORS ---
+# ARITHMETIC OPERATORS---
 
 a = 15
 b = 4
 
-# Addition (+)
-print("a + b =", a + b)
-# Output: a + b = 19
+addition = a + b
+print(addition)
 
-# Subtraction (-)
-print("a - b =", a - b)
-# Output: a - b = 11
+subtraction = a - b
+print(subtraction)
 
-# Multiplication (*)
-print("a * b =", a * b)
-# Output: a * b = 60
+multiplication = a * b
+print(multiplication)
 
-# Division (/)
-# Always returns a float, even if divisible
-print("a / b =", a / b)
-# Output: a / b = 3.75
+division = a / b
+print(division)
 
-# Floor Division (//)
-# Returns the quotient without the decimal part (integer division)
-print("a // b =", a // b)
-# Output: a // b = 3
+floor_division = a // b
+print(floor_division)
 
-# Modulus (%)
-# Returns the remainder after division
-print("a % b =", a % b)
-# Output: a % b = 3
+modulus = a % b
+print(modulus)
 
-# Exponentiation (**)
-# Raises a to the power of b
-print("a ** b =", a ** b)
-# Output: a ** b = 50625
+power = a**b
+print(power)

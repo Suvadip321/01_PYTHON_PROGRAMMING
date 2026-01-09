@@ -1,6 +1,5 @@
-# -------------------------------
 # for loop with range()
-# -------------------------------
+print("for loop with range:\n")
 
 # range(stop) → 0 to stop-1
 for i in range(5):
@@ -8,7 +7,7 @@ for i in range(5):
 print("\n")
 
 # range(start, stop) → start to stop-1
-for i in range(1, 5):
+for i in range(1, 6):
     print(i, end=" ")
 print("\n")
 
@@ -18,15 +17,12 @@ for i in range(1, 10, 2):
 print("\n")
 
 # Decreasing loop using negative step
-for i in range(10, 1, -2):
+for i in range(10, 0, -1):
     print(i, end=" ")
 print("\n\n")
 
 
-# -------------------------------
-# Iterating with for loop over different data types
-# -------------------------------
-
+# Iterating with for loop over different data structures
 # String
 print("Iterating over a string:")
 name = "Python"
@@ -59,7 +55,7 @@ print()
 print("Iterating over a dictionary (keys):")
 student = {"name": "Suvadip", "age": 20, "grade": "A"}
 for key in student:
-    print(key)
+    print(key, "->", student[key])
 print()
 
 # Dictionary (keys and values)
@@ -69,10 +65,7 @@ for key, value in student.items():
 print("\n")
 
 
-# -------------------------------
 # for loop with else
-# -------------------------------
-
 # Case 1: Normal completion (else runs)
 print("for-else example (no break):")
 for i in range(5):
@@ -93,14 +86,11 @@ else:
 print("\n")
 
 
-# -------------------------------
 # Nested for loops
-# -------------------------------
-
 # Example: Pattern printing
 print("Right-angled triangle pattern:")
-rows = 5
-for i in range(1, rows + 1):
+row = 5
+for i in range(1, row+1):
     for j in range(i):
         print("*", end=" ")
     print()

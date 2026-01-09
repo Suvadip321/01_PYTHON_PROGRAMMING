@@ -1,6 +1,6 @@
 # Used to check multiple conditions one after another
 
-marks = 75
+marks = int(input("Enter marks: "))
 
 if marks >= 90:
     print("Grade A")
@@ -10,5 +10,3 @@ elif marks >= 50:
     print("Grade C")
 else:
     print("Fail")
-
-

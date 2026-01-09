@@ -1,81 +1,72 @@
-# =========================================
 # LIST CREATION
-# =========================================
-
 # Empty list
-lst1 = []
-# List with elements
-lst2 = [1, 2, 3, 4, 5]
+l1 = []
+# List with same data type
+l2 = [1, 2, 3, 4, 5]
 # List with mixed data types
-lst3 = [1, "Python", 3.14, True]
+l3 = [3, "Python", 3.14, True]
 # Nested list
-lst4 = [[1, 2], [3, 4]]
+l4 = [[1, 2], [3, 4]]
 
-print("Empty list:", lst1)
-print("Integer list:", lst2)
-print("Mixed list:", lst3)
-print("Nested list:", lst4)
+print(l1)
+print(l2)
+print(l3)
+print(l4)
 
-# =========================================
-# LIST LENGTH
-# =========================================
 
-length = len(lst2)  # len() returns number of elements
-print("\nLength of lst2:", length)
+# LENGTH, INDEXING & SLICING
+l = ["p", "y", "t", "h", "o", "n"]
 
-# =========================================
-# LIST INDEXING AND SLICING
-# =========================================
-
-text_list = ["Python", "is", "awesome"]
+# len() -> returns number of elements in a list
+print("\nLength:", len(l))
 
 # Indexing: Access individual elements
 print("\nIndexing:")
-print("text_list[0]:", text_list[0])     # First element
-print("text_list[-1]:", text_list[-1])   # Last element
+print(l[0])    # First element 'p'
+print(l[-1])   # Last element 'n'
+list_2d = [[1, 2], [3, 4], [5, 6]]
+print(list_2d[0][1])
 
-# Slicing: Extract sublists
+# Slicing: Extract a sublist [start:end:step]
 print("\nSlicing:")
-print("text_list[0:2]:", text_list[0:2])   # First two elements
-print("text_list[:2]:", text_list[:2])     # First two elements
-print("text_list[1:]:", text_list[1:])     # From second element to end
-print("text_list[::-1]:", text_list[::-1]) # Reversed list
+print(l[0:6:1])
+print(l[0:4]) 
+print(l[:3])
+print(l[2:])
+print(l[:])
+print(l[::2])
+print(l[::-1])
 
-# =========================================
-# LIST MUTABILITY
-# =========================================
 
+# LIST MUTABILITY 
 lst = [10, 20, 30]
-lst[0] = 100   # ✅ Lists are mutable
+lst[0] = 100
 print("\nModified list:", lst)
 
-# =========================================
-# LIST OPERATIONS
-# =========================================
 
+# LIST OPERATIONS
 a = [1, 2, 3]
 b = [4, 5, 6]
 
 print("\nConcatenation:", a + b)  # Combine lists
 print("Repetition:", a * 3)       # Repeat list
 
-# =========================================
-# COMMON LIST METHODS
-# =========================================
 
+# COMMON LIST METHODS
 lst = [3, 1, 4, 1, 5, 9]
 print("\nOriginal list:", lst)
 
 # Adding elements
-lst.append(2)            # Add at end
-lst.insert(1, 8)         # Add at index 1
-lst.extend([10, 12, 16]) # Add multiple elements at the end
+lst.append(2)             # Add at end
+lst.insert(1, 8)          # Add at index 1
+lst.extend([10, 12, 16])  # Add multiple elements at the end
 print("After append, insert and extend:", lst)
 
 # Removing elements
-lst.remove(1)            # Remove first occurrence of 1
-popped = lst.pop()       # Remove last element and return it
-print("After remove and pop:", lst, "| Popped element:", popped)
+lst.remove(1)   # Remove first occurrence of 1
+lst.pop()       # Remove last element and return it
+lst.pop(0)      # Remove at index
+print("After remove and pop:", lst)
 
 # Sorting and reversing
 lst.sort()               # Sort list in ascending order
@@ -91,10 +82,3 @@ print("Index of 5:", lst.index(5))
 lst_copy = lst.copy()    # Shallow copy
 lst.clear()              # Clear original list
 print("Copied list:", lst_copy, "| Cleared list:", lst)
-
-# =========================================
-# NESTED LIST ACCESS
-# =========================================
-
-nested = [[1, 2], [3, 4], [5, 6]]
-print("\nNested list element [1][0]:", nested[1][0])  # 3

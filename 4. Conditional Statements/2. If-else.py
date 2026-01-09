@@ -1,9 +1,8 @@
-# Adds an alternative block if the condition is False
+"""Adds an alternative block if the condition is False"""
 
-age = 16
+age = int(input("Enter age: "))
 
 if age >= 18:
     print("You can vote.")
 else:
     print("You are not eligible to vote yet.")
-
