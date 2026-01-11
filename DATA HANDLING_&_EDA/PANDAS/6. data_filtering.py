@@ -10,10 +10,12 @@ print("top strike rates:")
 top_sr = df[df['SR'] >= 150]
 print(top_sr)
 
-print("top runs with and strike rates:")
+print("top runs and strike rates:")
 top_rsr = df[(df['Runs'] >= 500) & (df['SR'] >= 150)]
 print(top_rsr)
 
-print("top runs or top strike rates:")
-top_rsr = df[(df['Runs'] >= 500) | (df['SR'] >= 150)]
+print("top runs and strike rates using loc:")
+top_rsr = df.loc[
+    (df['Runs'] >= 500) & (df['SR'] >= 150)
+]
 print(top_rsr)

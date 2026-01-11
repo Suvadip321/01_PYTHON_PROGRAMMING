@@ -15,9 +15,11 @@ print(arr1d[0:5:2])
 print(arr1d[::2])
 print(arr1d[::-1])
 
-arr2d = np.array([[1, 2, 3],
-                  [4, 5, 6],
-                  [7, 8, 9]])
+arr2d = np.array([
+    [1, 2, 3],
+    [4, 5, 6], 
+    [7, 8, 9]
+])
 
 print("multidimensional indexing:")
 print(arr2d[0, 0])

@@ -24,5 +24,6 @@ print(df.dropna(subset=['Age', 'Salary']))
 print(df.fillna({'Age': df['Age'].mean(), 'Salary': df['Salary'].median()}))
 
 print("removing duplicates:")
-df_unique = df.drop_duplicates()
-print(df_unique)
+print(df.duplicated().sum())
+df = df.drop_duplicates()
+print(df)

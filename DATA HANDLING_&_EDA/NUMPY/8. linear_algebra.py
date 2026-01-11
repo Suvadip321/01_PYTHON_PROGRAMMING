@@ -10,7 +10,6 @@ matrix1 = np.array([[1, 2],
 matrix2 = np.array([[5, 6],
                     [7, 8]])
 
-print(f"matrix multiplication:\n{np.matmul(matrix1, matrix2)}")
 print(f"matrix multiplication:\n{matrix1 @ matrix2}")
 
 matrix = np.array( [[1, 2],

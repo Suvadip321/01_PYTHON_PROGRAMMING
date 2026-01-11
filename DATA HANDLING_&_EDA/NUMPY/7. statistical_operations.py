@@ -1,8 +1,10 @@
 import numpy as np 
 
-data = np.array([ [1, 2, 3],
-                  [4, 5, 6],
-                  [7, 8, 9] ])
+data = np.array([
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+])
 
 print(f"sum: {np.sum(data)}")
 print(f"sum along axis 0: {np.sum(data, axis=0)}") # rows collapse moving down the columns

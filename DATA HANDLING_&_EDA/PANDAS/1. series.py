@@ -15,8 +15,3 @@ print(f"dict_series:\n{dict_series}")
 print("loc and iloc:")
 print(f"loc: {dict_series.loc['Apple']}")
 print(f"iloc: {dict_series.iloc[0]}")
-
-# dict_series.iloc[2] = 8
-# print(dict_series)
-
-# print(dict_series[dict_series >= 7])

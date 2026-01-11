@@ -12,10 +12,14 @@ print(f"vstack:\n{vstack}")
 hstack = np.hstack([a1, a2])
 print(f"hstack:\n{hstack}")
 
-arr1 = np.array([[1, 2],
-                  [3, 4]])
-arr2 = np.array([[5, 6],
-                  [7, 8]])
+arr1 = np.array([
+    [1, 2],
+    [3, 4]
+])
+arr2 = np.array([
+    [5, 6],
+    [7, 8]]
+)
 
 concatenate_0 = np.concatenate([arr1, arr2], axis=0)
 print(f"concatenate_0:\n{concatenate_0}")
@@ -26,8 +30,6 @@ arr = np.array([1, 2, 3, 4, 5, 6, 7, 8])
 
 split = np.split(arr, 4)
 print(f"split: {split}")
-split_indices = np.split(arr, [3, 6])
-print(f"split_indices: {split_indices}")
 
 arr = np.array([[1, 2, 3, 4], [5, 6, 7, 8]])
 

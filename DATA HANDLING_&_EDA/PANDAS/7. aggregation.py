@@ -14,3 +14,8 @@ print(df['Runs'].sum())
 print(df['Runs'].min())
 print(df['Runs'].max())
 
+print("using agg:")
+print(df.agg({
+    'Runs': ['mean', 'sum', 'min', 'max'],
+    'SR': ['mean', 'sum', 'min', 'max']
+}))
